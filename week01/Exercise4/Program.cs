@@ -21,7 +21,7 @@ while (number != 0)
     }
 }
 
-// Calculate the sum
+// let me calculate the sum
 int sum = 0;
 
 foreach (int value in numbers)
@@ -31,12 +31,12 @@ foreach (int value in numbers)
 
 Console.WriteLine($"The sum is: {sum}");
 
-// Calculate the average
+// let me calculate the average
 float average = (float)sum / numbers.Count;
 
 Console.WriteLine($"The average is: {average}");
 
-// Find the largest number
+//  let me find the largest number like python image i m loving this language
 int largest = numbers[0];
 
 foreach (int value in numbers)

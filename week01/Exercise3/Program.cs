@@ -1,30 +1,46 @@
 //author: Banze Billy
+// passed the requirement added a way if they can keep playing by using a nested while loop
 
 Random randomGenerator = new Random();
 int magicNumber = randomGenerator.Next(1, 101);
 
-int guess = -1;
-int guessCount = 0;
 
-while (guess != magicNumber)
+string playAgain = "yes";
+
+while (playAgain == "yes")
 {
-    Console.Write("What is your guess? ");
-    guess = int.Parse(Console.ReadLine());
+    
+    int guess = -1;
+    int guessCount = 0;
 
-    guessCount++;
+    while (guess != magicNumber)
+    {
+        Console.Write("Guess a number? ");
+        guess = int.Parse(Console.ReadLine());
+        guessCount++;
 
-    if (guess < magicNumber)
-    {
-        Console.WriteLine("Higher");
+        if (magicNumber > guess)
+        {
+            Console.WriteLine("Higher");
+        }
+        else if (magicNumber < guess)
+        {
+            Console.WriteLine("Lower");
+        }
+        else
+        {
+            Console.WriteLine("You guessed it!");
+        }
+
+        Console.WriteLine($"It took you {guessCount} guesses.");
     }
-    else if (guess > magicNumber)
+
+    Console.Write("Do you want to play again? ");
+    playAgain = Console.ReadLine();
+
+    if (playAgain == "no")
     {
-        Console.WriteLine("Lower");
-    }
-    else
-    {
-        Console.WriteLine("You guessed it!");
-        Console.WriteLine($"You guessed it in {guessCount} guesses.");
+        Console.WriteLine("Well done! See you next time.");
     }
 }
 

@@ -86,4 +86,26 @@ public class WritingAssigments : ASSIgnm
 
 
 
+class Problem
+{
+    static void Main(string[] args)
+    {
+        ASSIgnm a1 = new ASSIgnm("billy Paul", "Multiplication");
+        Console.WriteLine(a1.GetSummaries());
+
+        MathAssgnme a2 = new MathAssgnme("Eddo Mpundu", "Franctions", "7.3", "8-19");
+        Console.WriteLine(a2.GetSummaries());
+        Console.WriteLine(a2.GetHomeworkList);
+
+
+
+        WritingAssigments a3 = new WritingAssigments("marry Paul", "Europe history", "The cause of world war II");
+        Console.WriteLine(a3.GetSummaries());
+        Console.WriteLine(a3.GetwritingInfo());
+    }
+}
+
+
+
+
 

@@ -1,3 +1,4 @@
+
 public class WritingAssignment : Assignment
 {
     private string _title;
